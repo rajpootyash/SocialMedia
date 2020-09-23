@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- External css -->
+    <link rel="stylesheet" href="./styles/base.css"/>
+</head>
+    <body>
+        
+        <!-- 
+            
+            MenuItems
+         -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand & Hamberger -->
+                <div class="navbar-header">
+                    <!-- Brand -->
+                    <a href="index.html" class="navbar-brand">
+                        <img src="./images/logo.png" class="img-responsive"/>
+                    </a>
+                    <!-- Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-target="#nav-menu" data-toggle="collapse" area-hidden="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                       <!-- Tweet button -->
+                    <button id="tweet" class="btn btn-default pull-right visible-xs-block">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        Tweet
+                    </button>
+                </div>
+                <!-- Menu Item -->
+                <div class="collapse navbar-collapse" id="nav-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-home" area-hidden="true"></span>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="badge">5</span>
+                                <span class="glyphicon glyphicon-bell" area-hidden="true"></span>
+                                Notification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-envelope" area-hidden="true"></span>
+                                Messages
+                            </a>
+                        </li>
+                        <li class="visible-xs-inline">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-user" area-hidden="true"></span>
+                                Profile
+                            </a>
+                        </li>
+                        <li class="visible-xs-inline">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-cog" area-hidden="true"></span>
+                                Setting
+                            </a>
+                        </li>
+                        <li class="visible-xs-inline">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-off" area-hidden="true"></span>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Tweet button -->
+                    <button id="tweet" class="btn btn-default pull-right hidden-xs">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        Tweet
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div id="nav-options" class="btn-group pull-right hidden-xs">
+                       <button type="button" class="btn btn-default dropdown-toggle thumbnail" data-toggle="dropdown">
+                           <img src="./images/jon.png"/>
+                       </button> 
+                       <ul class="dropdown-menu">
+                           <li><a href="#">Profile</a></li>
+                           <li><a href="setting.html">Setting</a></li>
+                           <li role="separator" class="divider"></li>
+                           <li><a href="#">Logout</a></li>
+                       </ul>
+                    </div>
+                    <!-- Search-Form -->
+                    <form id="search" class="hidden-sm hidden-xs">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="glyphicon glyphicon-search" area-hidden="true"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+           <div class="row">
+               <!-- Left 3-grid column -->
+               <div id="profile-resume" class="col-md-3 hidden-sm hidden-xs">
+                 <div class="card"> 
+                    <img src="./images/landscape.jpg" class="card-img-top img-responsive" alt="">  
+                    <div class="card-block">
+                        <img src="./images/jon.png" class="card-img" />
+                        <h4 class="card-title">Jonny Doo <small>@jonnydoo</small></h4>
+                        <p class="card-text">Dog goes woofy. Did you said squitly?</p>
+                        <ul class="list-inline list-unstyled">
+                            <li id="card-tweets" class="list-inline-item">
+                                <a href="#">
+                                    <span class="profile-status">Tweets</span>
+                                    <span class="profile-value">99k</span>
+                                </a>
+                            </li>
+                            <li id="card-following" class="list-inline-item">
+                                <a href="#">
+                                    <span class="profile-status">Following</span>
+                                    <span class="profile-value">7k</span>
+                                </a>
+                            </li>
+                            <li id="card-followers" class="list-inline-item">
+                                <a href="#">
+                                    <span class="profile-status">Followers</span>
+                                    <span class="profile-value">154k</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>  
+                 </div>
+
+                 <!-- Seetings-card -->
+                 <div id="profile-settings"class="card">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active">
+                            <a href="#">Account
+                                <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                            </a>
+                           
+                        </li>
+                        <li class="">
+                            <a href="#">Security
+                                <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                            </a>
+                            
+                        </li>
+                        <li class="">
+                            <a href="#">Notifications
+                                <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">Design
+                                <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                            </a>
+                        </li>
+                    </ul>
+                 </div>
+               </div>
+           
+               <!-- Middle 6-grids column -->
+               <div id="main" class="col-sm-12 col-md-6">
+                   <ul id="account-tabs" class="nav nav-tabs nav-justified">
+                       <li>
+                           <a href="#account-user" data-toggle="tab">User Info</a>
+                       </li>
+                       <li>
+                           <a href="#account-language" data-toggle="tab">Language</a>
+                       </li>
+                       <li>
+                         <a href="#account-mobile" data-toggle="tab">Mobile</a>
+                       </li>
+                   </ul>
+
+                   <div class="tab-content  card">
+                        <div class="tab-pane" id="account-user" >
+                           <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text"  class="form-control" value="Jonny Doo">
+                                    </div>
+                                </div>
+                             
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Username</label>
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">@</div>
+                                            <input type="text"  class="form-control" value="jonnydoo">
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                             
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email"  class="form-control" value="jonnydoo@gmail.com">
+                                    </div>
+                                </div>
+                             
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <button type="submit" class="btn btn-primary">
+                                            Save Changes
+                                        </button>
+                                    </div>
+                                </div>
+
+                           </form>
+                        </div> 
+                        <div class="tab-pane" id="account-language">
+                            Language tab pane
+                        </div> 
+                        <div class="tab-pane" id="account-mobile">
+                            Mobile tab pan
+                        </div> 
+                   </div>
+
+                </div>
+               
+               <!-- Right 3-grids column-->
+               <div id="right-contnet" class="col-md-3  hidden-sm hidden-xs">
+                   <!-- who-follow card -->
+                   <!-- <div id="who-follow" class="card">
+                        <div class="card-header">
+                            Who to follow
+                        </div>
+                        <div class="card-block">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <img src="./images/cat.jpg" class="img-rounded"/>
+                                    <div class="info">
+                                        <strong>Crazy cats</strong>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>Follow
+                                        </button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="./images/ration.jpg" class="img-rounded"/>
+                                    <div class="info">
+                                        <strong>Free ration alert</strong>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>Follow
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                   </div> -->
+
+                   <!-- app-info card -->
+                   <!-- <div id="app-info" class="card">
+                       <div class="card-block">
+                           &copy; SampleApp
+                           <ul class="list-unstyled list-inline">
+                             <li><a href="#">About</a></li>
+                             <li><a href="#">Terms and Privacy</a></li>
+                             <li><a href="#">Help</a></li>
+                             <li><a href="#">Status</a></li>
+                             <li><a href="#">Contact</a></li>
+                           </ul>
+                       </div>
+                       <div class="card-footer">
+                           <a href="#">Connect other address book</a>
+                       </div>
+                   </div> -->
+               </div>
+           </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
+    </body>
+</html>
